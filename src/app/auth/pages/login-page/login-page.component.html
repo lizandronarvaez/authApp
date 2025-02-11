@@ -1,0 +1,48 @@
+<form class="space-y-6" [formGroup]="form" (ngSubmit)="login()">
+    <!-- Título del formulario -->
+    <header>
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">
+            Iniciar sesión
+        </h1>
+    </header>
+
+    <!-- Campo de correo electrónico -->
+    <div class="space-y-2">
+        <label for="email" class="block text-sm font-medium text-gray-700">
+            Correo electrónico
+        </label>
+        <input id="email"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            type="email" placeholder="Correo electrónico" formControlName="email" />
+    </div>
+
+    <!-- Campo de contraseña -->
+    <div class="space-y-2">
+        <label for="password" class="block text-sm font-medium text-gray-700">
+            Contraseña
+        </label>
+        <input id="password"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            type="password" placeholder="Ingrese su contraseña" formControlName="password" />
+    </div>
+
+    <!-- Botón de envío -->
+    <div class="mt-6">
+        <button
+            class="w-full px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            type="submit" [disabled]="form.invalid">
+            Iniciar sesión
+        </button>
+    </div>
+
+    <!-- Enlace para registrarse -->
+    <footer class="mt-8 text-center">
+        <p class="text-sm text-gray-600">
+            ¿No tienes cuenta?
+        </p>
+        <a href="/auth/register" class="text-sm text-blue-600 hover:text-blue-700 font-semibold"
+            aria-label="Crear una cuenta nueva">
+            Crear una aquí
+        </a>
+    </footer>
+</form>

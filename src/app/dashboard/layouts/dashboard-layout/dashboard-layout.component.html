@@ -1,0 +1,21 @@
+<div class="h-screen flex flex-col">
+    <div class="bg-[#0e3b74] p-5 text-white text-xl">
+        <h1>Dashboard AuthApp</h1>
+    </div>
+
+    <div class="flex flex-grow">
+        <!-- aside -->
+        <div class="w-1/4 bg-gray-600 p-5 text-white flex flex-col justify-between">
+            <div class="text-center">
+                <h2>Menu Lateral</h2>
+                <p>Usuario: {{currentUser()?.fullname | titlecase}}</p>
+            </div>
+            <div class="flex justify-center">
+                <button class="cursor-pointer py-2 px-2 bg-red-500 rounded" (click)="logout()">Logout</button>
+            </div>
+        </div>
+        <div class="flex-grow p-5">
+            <h2>Resto menu</h2>
+        </div>
+    </div>
+</div>
